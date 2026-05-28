@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Núcleo Católico Español | Dios, Patria y Tradición</title>
+    <meta name="description" content="Sitio oficial del movimiento Núcleo Católico Español. Comprometidos con la defensa de Dios, la Familia, la Patria y nuestras tradiciones históricas.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%7CMontserrat%3A600%2C700%7CCinzel%3A400%2C500%2C700&#038;display=fallback" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="assets/camiseta_oficial.png">
+</head>
+<body class="dark-theme">
+    <!-- Preloader / Pantalla de bienvenida -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <svg class="preloader-cross" viewBox="-11 -11 22 36">
+                <defs>
+                    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#d4af37" />
+                        <stop offset="50%" stop-color="#f3e5ab" />
+                        <stop offset="100%" stop-color="#aa7c11" />
+                    </linearGradient>
+                </defs>
+                <path fill="url(#goldGradient)" d="M0,25 l-3,-17 c1,0 2,-1 2,-2 v-5 h-5 c-2,4 -4,-1 -5,-1 c1,0 3,-5 5,-1 h5 v-5 c-4,-2 1,-4 1,-5 c0,1 5,3 1,5 v5 h5 c2,-4 4,1 5,1 c-1,0 -3,5 -5,1 h-5 v5 c0,1 1,2 2,2 z"/>
+            </svg>
+            <h2 class="preloader-title">NÚCLEO CATÓLICO ESPAÑOL</h2>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navegación superior (Header) -->
+    <header class="main-header" id="masthead">
+        <div class="header-container">
+            <div class="site-branding">
+                  <a href="#inicio" class="logo-link">
+                        <svg class="header-logo-svg" viewBox="-11 -11 22 36" aria-label="Cruz de Santiago">
+                          <path fill="#c5a059" d="M0,25 l-3,-17 c1,0 2,-1 2,-2 v-5 h-5 c-2,4 -4,-1 -5,-1 c1,0 3,-5 5,-1 h5 v-5 c-4,-2 1,-4 1,-5 c0,1 5,3 1,5 v5 h5 c2,-4 4,1 5,1 c-1,0 -3,5 -5,1 h-5 v5 c0,1 1,2 2,2 z"/>
+                        </svg>
+                   </a>
+            </div>
+
+            <!-- Botón menú móvil -->
+            <button class="mobile-menu-toggle" aria-label="Alternar menú de navegación" aria-expanded="false" id="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Menú de navegación desktop -->
+            <nav class="site-navigation" id="main-navigation">
+                <ul class="nav-menu">
+                    <li class="menu-item"><a href="#inicio" class="menu-link active">Inicio</a></li>
+                    <li class="menu-item"><a href="#quienes-somos" class="menu-link">Quiénes Somos</a></li>
+                    <li class="menu-item"><a href="#bases-ideologicas" class="menu-link">Bases Ideológicas</a></li>
+                    <li class="menu-item"><a href="#ultimos-actos" class="menu-link">Últimos Actos</a></li>
+                    <li class="menu-item"><a href="#tienda" class="menu-link">Tienda</a></li>
+                    <li class="menu-item"><a href="#militancia" class="menu-link btn-militancia">Militancia</a></li>
+                </ul>
+            </nav>
+
+            <!-- Carrito de compras e iconos en cabecera -->
+            <div class="header-actions">
+                <button class="cart-icon-btn" id="cart-trigger" aria-label="Ver carrito">
+                    <svg class="cart-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main id="content">
+
+        <!-- Sección Héroe (Hero Section) -->
+        <section class="hero-section" id="inicio">
+            <div class="hero-bg-wrapper">
+                <div class="hero-overlay"></div>
+                <!-- Imagen de fondo generada por IA -->
+                <img src="assets/hero_background.png" alt="España Católica Catedral Fondo" class="hero-bg-img">
+            </div>
+
+            <!-- Canvas para partículas interactivas de fuego/luz dorada -->
+            <canvas id="particles-canvas"></canvas>
+
+            <div class="hero-content-container">
+                <div class="hero-cross-glow">
+                     <svg class="glowing-cross-svg" viewBox="-11 -11 22 36" aria-label="Cruz de Santiago">
+                         <path fill="#c5a059" d="M0,25 l-3,-17 c1,0 2,-1 2,-2 v-5 h-5 c-2,4 -4,-1 -5,-1 c1,0 3,-5 5,-1 h5 v-5 c-4,-2 1,-4 1,-5 c0,1 5,3 1,5 v5 h5 c2,-4 4,1 5,1 c-1,0 -3,5 -5,1 h-5 v5 c0,1 1,2 2,2 z"/>
+                     </svg>
+                 </div>
+                <h1 class="hero-title">NÚCLEO CATÓLICO ESPAÑOL</h1>
+                <p class="hero-subtitle">DIOS · PATRIA · FAMILIA · TRADICIÓN</p>
+                <p class="hero-lead-text">Un movimiento de reconstrucción espiritual y cultural para la defensa de España y de los valores eternos de la cristiandad.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#militancia" class="btn btn-primary">ÚNETE AL MOVIMIENTO</a>
+                    <a href="#bases-ideologicas" class="btn btn-secondary">NUESTRAS BASES</a>
+                </div>
+            </div>
+
+            <!-- Indicador de scroll descendente -->
+            <div class="scroll-indicator-wrap">
+                <a href="#quienes-somos" class="scroll-indicator-link" aria-label="Desplazarse hacia abajo">
+                    <span class="scroll-arrow"></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección Quiénes Somos (El Nido / Quiénes Somos) -->
+        <section class="about-section" id="quienes-somos">
+            <div class="section-container">
+                <div class="about-grid">
+                    <div class="about-image-card">
+                        <img src="assets/bandera_oficial.png" alt="Bandera Cruz de Borgoña" class="about-img">
+                        <div class="image-accent-border"></div>
+                    </div>
+                    <div class="about-text-content">
+                        <h2 class="section-title text-gold">¿Quiénes Somos?</h2>
+                        <span class="section-divider"></span>
+                        <p class="about-text">Somos un movimiento patriótico y católico de ámbito español que nace de la necesidad de reconstruir las bases espirituales, morales y sociales de nuestra patria. Frente al avance del nihilismo, el materialismo ateo y la disolución de nuestras raíces históricas, alzamos la Cruz del Señor y el compromiso militante bajo el lema de Dios, Patria, Familia y Tradición.</p>
+                        <p class="about-text">Reivindicamos el legado de la España histórica: aquella que defendió la cristiandad en Europa, que evangelizó continentes enteros y que consagró su soberanía al reinado social de Jesucristo. No somos un partido político tradicional, somos una comunidad de militantes dedicados a la acción cultural, social e intelectual para forjar una alternativa nacional íntegra.</p>
+                        <a href="#militancia" class="btn btn-border-gold">SOLICITAR AFILIACIÓN</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Bases Ideológicas (Bases Ideológicas) -->
+        <section class="bases-section" id="bases-ideologicas">
+            <div class="section-container">
+                <div class="bases-grid-layout">
+                    <!-- Columna Izquierda: Acordeón Interactivo de Bases -->
+                    <div class="bases-accordion-col">
+                        <h2 class="section-title">Bases Ideológicas</h2>
+                        <span class="section-divider align-left"></span>
+                        <p class="bases-intro-text">Nuestras bases son los pilares sobre los que cimentamos cada acción, defendiendo nuestra identidad y resistiendo activamente la decadencia impuesta por el sistema moderno.</p>
+
+                        <!-- Acordeón Personalizado -->
+                        <div class="custom-accordion">
+                            <!-- Item 1 -->
+                            <div class="accordion-item" id="base-1">
+                                <button class="accordion-header" aria-expanded="false" aria-controls="content-base-1">
+                                    <span class="accordion-header-title">1. DEFENSORÍA DE LA FE Y CONFESIONALIDAD</span>
+                                    <span class="accordion-icon-cross"></span>
+                                </button>
+                                <div class="accordion-panel" id="content-base-1" role="region">
+                                    <div class="accordion-panel-content">
+                                        <p>Rechazamos la visión ateo-materialista que reduce al ser humano a un mero recurso de consumo. Defendemos la Santa Iglesia Católica como cimiento ineludible de España. Como movimiento estrictamente católico, la militancia está reservada a quienes profesen esta Fe. Rechazamos el sincretismo multiconfesional y la presencia de doctrinas contrarias a la verdad revelada, como el judaísmo o el islam, cuya teología es incompatible con la identidad histórica de la Patria.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="accordion-item" id="base-2">
+                                <button class="accordion-header" aria-expanded="false" aria-controls="content-base-2">
+                                    <span class="accordion-header-title">2. FOMENTO DE LA NATALIDAD Y LA FAMILIA</span>
+                                    <span class="accordion-icon-cross"></span>
+                                </button>
+                                <div class="accordion-panel" id="content-base-2" role="region">
+                                    <div class="accordion-panel-content">
+                                        <p>Defendemos el orden natural de la creación frente a ideologías destructivas de género o transhumanistas. Sostenemos que el hombre y la mujer tienen naturalezas y roles complementarios y que la familia tradicional, fuerte y numerosa, es la base biológica, espiritual y moral esencial para la continuidad física y el florecimiento de una patria soberana.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="accordion-item" id="base-3">
+                                <button class="accordion-header" aria-expanded="false" aria-controls="content-base-3">
+                                    <span class="accordion-header-title">3. PRESERVACIÓN DE LA PATRIA Y LA CULTURA</span>
+                                    <span class="accordion-icon-cross"></span>
+                                </button>
+                                <div class="accordion-panel" id="content-base-3" role="region">
+                                    <div class="accordion-panel-content">
+                                        <p>Reconocemos y honramos las raíces históricas de los pueblos hispanos. Sostenemos que la soberanía de España no se negocia ni se vende ante organismos supranacionales globalistas. Reivindicamos la defensa de las fronteras físicas y culturales, la promoción del patrimonio histórico español y la resistencia contra el reemplazo cultural e identitario provocado por flujos migratorios masivos y descontrolados.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="accordion-item" id="base-4">
+                                <button class="accordion-header" aria-expanded="false" aria-controls="content-base-4">
+                                    <span class="accordion-header-title">4. RESISTENCIA A LA PROPAGANDA GLOBALISTA</span>
+                                    <span class="accordion-icon-cross"></span>
+                                </button>
+                                <div class="accordion-panel" id="content-base-4" role="region">
+                                    <div class="accordion-panel-content">
+                                        <p>Nos oponemos formalmente a la influencia degradante del sistema en la educación, la cultura contemporánea y los medios masivos de difusión. Rechazamos los discursos de adoctrinamiento anticristiano y antiespañol. Fomentamos la autodefensa cultural de nuestras familias, la creación de escuelas y agrupaciones alternativas, y la vivencia cotidiana de valores nobles, limpios y heroicos.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Derecha: Tarjeta de Misión Solemne -->
+                    <div class="bases-card-col">
+                        <div class="solemn-mission-card">
+                            <div class="card-glow"></div>
+                            <div class="card-cross-watermark">
+                         <svg class="card-cross-svg" viewBox="-11 -11 22 36" aria-label="Cruz de Santiago">
+                             <path fill="#c5a059" opacity="0.15" d="M0,25 l-3,-17 c1,0 2,-1 2,-2 v-5 h-5 c-2,4 -4,-1 -5,-1 c1,0 3,-5 5,-1 h5 v-5 c-4,-2 1,-4 1,-5 c0,1 5,3 1,5 v5 h5 c2,-4 4,1 5,1 c-1,0 -3,5 -5,1 h-5 v5 c0,1 1,2 2,2 z"/>
+                         </svg>
+                     </div>
+                            <h3 class="solemn-card-title">EL DEBER MILITANTE</h3>
+                            <p class="solemn-card-text">"En Núcleo Católico Español, nuestras bases ideológicas son las directrices de cada acción y decisión. No buscamos el aplauso de la modernidad decadente, sino la fidelidad a Dios, a la verdad histórica y al legado que debemos heredar a nuestros hijos en una patria justa, unida y santa."</p>
+                            <span class="solemn-card-signature">Militancia por la Verdad</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Últimos Actos (Noticias / Eventos) -->
+        <section class="events-section" id="ultimos-actos">
+            <div class="section-container">
+                <div class="section-header-center">
+                    <h2 class="section-title">Últimos Actos</h2>
+                    <span class="section-divider"></span>
+                    <p class="section-subtitle">Crónica y testimonio de nuestra presencia y compromiso en las calles de España.</p>
+                </div>
+
+                <div class="events-grid">
+                    <!-- Tarjeta Acto 1 -->
+                    <div class="event-card">
+                        <div class="event-card-img-wrap">
+                            <img src="assets/hero_background.png" alt="Romería Marianista" class="event-img">
+                            <span class="event-date">15 MAY 2026</span>
+                        </div>
+                        <div class="event-card-content">
+                            <h3 class="event-card-title">I Romería por la Reconquista Espiritual</h3>
+                            <p class="event-card-excerpt">Militantes y simpatizantes nos reunimos en una solemne peregrinación hacia el Santuario de nuestra Señora de Covadonga, rezando el Santo Rosario por España y el fin de la decadencia moral.</p>
+                            <button class="btn-read-more" onclick="alert('Próximamente disponible la galería y crónica completa del evento en Covadonga.')">LEER CRÓNICA &rarr;</button>
+                        </div>
+                    </div>
+                    <!-- Tarjeta Acto 2 -->
+                    <div class="event-card">
+                        <div class="event-card-img-wrap">
+                            <img src="assets/bandera_oficial.png" alt="Conferencia de Fe y Tradición" class="event-img">
+                            <span class="event-date">02 ABR 2026</span>
+                        </div>
+                        <div class="event-card-content">
+                            <h3 class="event-card-title">Conferencia: "La Cruz y la Espada"</h3>
+                            <p class="event-card-excerpt">En Madrid tuvo lugar la primera conferencia nacional sobre la historia heroica del catolicismo social en España. Contamos con destacados ponentes que analizaron la resistencia cultural tradicionalista.</p>
+                            <button class="btn-read-more" onclick="alert('Próximamente disponible la galería y crónica completa de la conferencia en Madrid.')">LEER CRÓNICA &rarr;</button>
+                        </div>
+                    </div>
+                    <!-- Tarjeta Acto 3 -->
+                    <div class="event-card">
+                        <div class="event-card-img-wrap">
+                            <img src="assets/camiseta_oficial.png" alt="Acción Social Familiar" class="event-img">
+                            <span class="event-date">10 MAR 2026</span>
+                        </div>
+                        <div class="event-card-content">
+                            <h3 class="event-card-title">Campaña de Ayuda Social Familiar N.C.E.</h3>
+                            <p class="event-card-excerpt">Fieles a nuestro compromiso de ayuda comunitaria, repartimos alimentos y material de primera necesidad a decenas de familias españolas vulnerables y sin recursos en la provincia de Valladolid.</p>
+                            <button class="btn-read-more" onclick="alert('Próximamente disponible la galería y crónica completa del reparto social en Valladolid.')">LEER CRÓNICA &rarr;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Tienda (Viste tus Valores) -->
+        <section class="shop-section" id="tienda">
+            <div class="section-container">
+                <div class="section-header-center">
+                    <h2 class="section-title text-gold">VISTE TUS VALORES</h2>
+                    <span class="section-divider"></span>
+                    <p class="section-subtitle">Equípate con nuestros emblemas tradicionales y apoya económicamente el desarrollo del movimiento.</p>
+                </div>
+
+                <div class="products-grid">
+                    <!-- Producto 1 -->
+                    <div class="product-card" data-product-id="camiseta-nce">
+                        <div class="product-img-container">
+                            <img src="assets/camiseta_oficial.png" alt="Camiseta Oficial N.C.E." class="product-img">
+                            <span class="product-price">19,95€</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Camiseta Oficial - N.C.E.</h3>
+                            <p class="product-description">Camiseta negra de algodón premium con el emblema de la cruz dorada del movimiento en el pecho.</p>
+                            <button class="btn btn-secondary btn-full btn-view-product" data-product="camiseta-nce">VER DETALLES</button>
+                        </div>
+                    </div>
+                    <!-- Producto 2 -->
+                    <div class="product-card" data-product-id="balaclava-nce">
+                        <div class="product-img-container">
+                            <img src="assets/balaclava_oficial.png" alt="Balaclava Combate N.C.E." class="product-img">
+                            <span class="product-price">12,00€</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Balaclava Oficial - N.C.E.</h3>
+                            <p class="product-description">Pasamontañas táctico negro con bordado lateral de la cruz de combate carmesí.</p>
+                            <button class="btn btn-secondary btn-full btn-view-product" data-product="balaclava-nce">VER DETALLES</button>
+                        </div>
+                    </div>
+                    <!-- Producto 3 -->
+                    <div class="product-card" data-product-id="polo-nce">
+                        <div class="product-img-container">
+                            <img src="assets/polo_oficial.png" alt="Polo España Católica N.C.E." class="product-img">
+                            <span class="product-price">27,95€</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Polo Oficial - España Católica</h3>
+                            <p class="product-description">Polo elegante de piqué negro con bordes de cuello con la bandera de España y cruz de Santiago bordada.</p>
+                            <button class="btn btn-secondary btn-full btn-view-product" data-product="polo-nce">VER DETALLES</button>
+                        </div>
+                    </div>
+                    <!-- Producto 4 -->
+                    <div class="product-card" data-product-id="bandera-oficial">
+                        <div class="product-img-container">
+                            <img src="assets/bandera_oficial.png" alt="Bandera Cruz de Borgoña N.C.E." class="product-img">
+                            <span class="product-price">15,95€</span>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">Bandera de Combate - Borgoña</h3>
+                            <p class="product-description">La histórica y gloriosa Cruz de Borgoña, bandera de los Tercios y símbolo de tradición.</p>
+                            <button class="btn btn-secondary btn-full btn-view-product" data-product="bandera-oficial">VER DETALLES</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Formulario Militancia (Militancia / Afíliate) -->
+        <section class="militancy-section" id="militancia">
+            <div class="section-container">
+                <div class="militancy-grid">
+                    <!-- Columna Información -->
+                    <div class="militancy-info-col">
+                        <h2 class="section-title text-gold">Militancia Activa</h2>
+                        <span class="section-divider align-left"></span>
+                        <p class="militancy-intro">El Núcleo Católico Español no busca simpatizantes pasivos. Buscamos militantes dispuestos a formarse, a servir y a actuar activamente por los ideales que defendemos en su localidad.</p>
+                        
+                        <div class="militancy-requirements">
+                            <div class="req-item">
+                                <span class="req-icon-cross">&#10013;</span>
+                                <div>
+                                    <h4>Formación y Virtud</h4>
+                                    <p>Estudio de nuestras bases doctrinales e históricas y búsqueda activa de la virtud y la disciplina personal.</p>
+                                </div>
+                            </div>
+                            <div class="req-item">
+                                <span class="req-icon-cross">&#10013;</span>
+                                <div>
+                                    <h4>Acción Comunitaria</h4>
+                                    <p>Participación activa en labores asistenciales, conferencias, actividades de calle y propagación en tu provincia.</p>
+                                </div>
+                            </div>
+                            <div class="req-item">
+                                <span class="req-icon-cross">&#10013;</span>
+                                <div>
+                                    <h4>Hermandad Nacional</h4>
+                                    <p>Colaborar estrechamente con el resto de militantes en un espíritu de disciplina, respeto y fraternidad cristiana.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Columna Formulario Glassmorphic -->
+                    <div class="militancy-form-col">
+                        <div class="glass-form-container">
+                            <h3 class="form-title">SOLICITUD DE ADMISIÓN</h3>
+                            <p class="form-desc">Completa tu postulación con seriedad. Todos los datos serán tratados con estricta confidencialidad.</p>
+                            
+                            <!-- Formulario interactivo por pasos -->
+                            <form id="militancy-form" class="multi-step-form">
+                                <!-- Paso 1: Datos Básicos -->
+                                <div class="form-step step-active" id="step-1">
+                                    <div class="input-group">
+                                        <label for="form-name">Nombre y Apellidos *</label>
+                                        <input type="text" id="form-name" required placeholder="Tu nombre completo">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="form-email">Correo Electrónico *</label>
+                                        <input type="email" id="form-email" required placeholder="correo@ejemplo.com">
+                                    </div>
+                                    <div class="form-row-2">
+                                        <div class="input-group">
+                                            <label for="form-age">Edad *</label>
+                                            <input type="number" id="form-age" min="16" max="99" required placeholder="Mínimo 16 años">
+                                        </div>
+                                        <div class="input-group">
+                                            <label for="form-province">Provincia *</label>
+                                            <input type="text" id="form-province" required placeholder="Ej. Madrid, Sevilla, etc.">
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-full btn-next-step">SIGUIENTE PASO &rarr;</button>
+                                </div>
+
+                                <!-- Paso 2: Motivaciones y Rol -->
+                                <div class="form-step" id="step-2">
+                                    <div class="input-group">
+                                        <label for="form-telegram">Usuario de Telegram (Recomendado)</label>
+                                        <input type="text" id="form-telegram" placeholder="@usuario (Para contacto directo seguro)">
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="form-motivation">¿Por qué deseas unirte a Núcleo Católico Español? *</label>
+                                        <textarea id="form-motivation" required placeholder="Describe brevemente tus ideales y razones..." rows="3"></textarea>
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="form-role">¿Cuál crees que puede ser tu rol o contribución en el movimiento? *</label>
+                                        <textarea id="form-role" required placeholder="Ej. Redes, diseño gráfico, organización local, acción benéfica..." rows="3"></textarea>
+                                    </div>
+                                    <div class="form-row-2">
+                                        <button type="button" class="btn btn-secondary btn-full btn-prev-step">&larr; VOLVER</button>
+                                        <button type="submit" class="btn btn-primary btn-full">ENVIAR SOLICITUD</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Pantalla de Éxito al enviar -->
+                            <div class="form-success-message" id="form-success">
+                                <div class="success-icon-wrap">
+                                    <span class="success-cross">&#10013;</span>
+                                </div>
+                                <h4 class="success-title">SOLICITUD REGISTRADA</h4>
+                                <p class="success-text">Tu postulación ha sido enviada con éxito. Un coordinador de zona revisará tu solicitud y se pondrá en contacto contigo de forma segura mediante tu Telegram o correo provisto.</p>
+                                <p class="success-text text-gold">**¡Dios, Patria y Tradición!**</p>
+                                <button type="button" class="btn btn-border-gold btn-full btn-reset-form">VOLVER A ENVIAR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal Detalles de Producto (Tienda) -->
+    <div class="product-modal-backdrop" id="product-modal">
+        <div class="product-modal-container">
+            <button class="modal-close-btn" id="modal-close" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-content-grid">
+                <div class="modal-image-wrap">
+                    <img src="" alt="" class="modal-product-img" id="modal-img">
+                </div>
+                <div class="modal-info-wrap">
+                    <span class="modal-category text-gold">MERCHANDISING OFICIAL</span>
+                    <h3 class="modal-product-title" id="modal-title">Nombre del Producto</h3>
+                    <div class="modal-product-price" id="modal-price">0.00€</div>
+                    <p class="modal-product-desc" id="modal-desc">Descripción detallada del producto.</p>
+                    
+                    <!-- Opciones de Talla -->
+                    <div class="modal-size-selector-wrap" id="size-selector-container">
+                        <label class="size-label">Selecciona tu Talla:</label>
+                        <div class="size-options">
+                            <button class="size-btn">S</button>
+                            <button class="size-btn active">M</button>
+                            <button class="size-btn">L</button>
+                            <button class="size-btn">XL</button>
+                            <button class="size-btn">XXL</button>
+                        </div>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button class="btn btn-primary btn-add-to-cart" id="modal-add-to-cart-btn">AÑADIR A LA CESTA</button>
+                        <div class="availability-status">
+                            <span class="status-dot"></span>
+                            <span>En Stock - Listo para envío (24/48h)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Carrito de Compras Simulado -->
+    <div class="cart-modal-backdrop" id="cart-modal">
+        <div class="cart-modal-container">
+            <div class="cart-modal-header">
+                <h3>TU CESTA</h3>
+                <button class="cart-close-btn" id="cart-close">&times;</button>
+            </div>
+            <div class="cart-modal-body">
+                <div class="cart-empty-message" id="cart-empty">
+                    <svg viewBox="0 0 24 24" class="cart-empty-svg" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <p>No tienes productos en tu cesta.</p>
+                    <a href="#tienda" class="btn btn-border-gold btn-shop-now">VER PRODUCTOS</a>
+                </div>
+                <div class="cart-items-list" id="cart-items" style="display: none;">
+                    <!-- Productos añadidos dinámicamente -->
+                </div>
+            </div>
+            <div class="cart-modal-footer" id="cart-footer" style="display: none;">
+                <div class="cart-total-row">
+                    <span>Total del Pedido:</span>
+                    <span class="cart-total-price" id="cart-total">0.00€</span>
+                </div>
+                <button class="btn btn-primary btn-full btn-checkout" onclick="alert('¡Gracias por tu apoyo! Esta tienda es una simulación visual premium. Para donaciones o pedidos reales ponte en contacto con los líderes de tu provincia.')">PROCESAR PEDIDO</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de Página (Footer) -->
+    <footer class="site-footer" id="colophon">
+        <div class="footer-container">
+            <div class="footer-top-row">
+                <div class="footer-branding">
+                    <svg class="footer-logo-svg" viewBox="-11 -11 22 36" aria-label="Cruz de Santiago">
+                         <path fill="#c5a059" d="M0,25 l-3,-17 c1,0 2,-1 2,-2 v-5 h-5 c-2,4 -4,-1 -5,-1 c1,0 3,-5 5,-1 h5 v-5 c-4,-2 1,-4 1,-5 c0,1 5,3 1,5 v5 h5 c2,-4 4,1 5,1 c-1,0 -3,5 -5,1 h-5 v5 c0,1 1,2 2,2 z"/>
+                     </svg>
+                    <p class="footer-brand-desc">Soberanía, Dios, Familia y Tradición. Movimiento católico y patriótico español para la reconquista moral y social.</p>
+                </div>
+                
+                <div class="footer-nav-col">
+                    <h4 class="footer-title">Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#quienes-somos">¿Quiénes Somos?</a></li>
+                        <li><a href="#bases-ideologicas">Bases Ideológicas</a></li>
+                        <li><a href="#ultimos-actos">Últimos Actos</a></li>
+                        <li><a href="#tienda">Tienda de Valores</a></li>
+                        <li><a href="#militancia">Afíliate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-nav-col">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#politica" onclick="alert('Nuestros datos están protegidos por cifrado completo y no compartimos información de afiliación con terceros bajo ninguna circunstancia.')">Política de Privacidad</a></li>
+                        <li><a href="#terminos" onclick="alert('Al formar parte de la milicia digital de N.C.E. aceptas respetar la jerarquía moral y espiritual de la Fe Católica y la defensa honesta de la Patria.')">Términos de Servicio</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social-col">
+                    <h4 class="footer-title">Síguenos</h4>
+                    <p class="social-desc">Conéctate a nuestros canales oficiales de difusión de forma segura:</p>
+                    <div class="social-icons-row">
+                        <!-- Icono Twitter / X -->
+                        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn x-icon" aria-label="X / Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
+                            </svg>
+                        </a>
+                        <!-- Icono Instagram -->
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon-btn instagram-icon" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <!-- Icono Telegram -->
+                        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-icon-btn telegram-icon" aria-label="Telegram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701-.33 4.955c.486 0 .7-.223.973-.486l2.335-2.27 4.857 3.589c.895.493 1.538.24 1.761-.823l3.187-15.016c.326-1.307-.5-1.902-1.356-1.551z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom-row">
+                <p class="copyright-text">Copyright &copy; 2026 | Powered by Núcleo Católico Español</p>
+                <div class="back-to-top-btn" id="scroll-to-top" aria-label="Volver arriba">
+                    <span class="arrow-up">&#9650;</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
